@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>task33</title>
+<link rel="stylesheet" href="task33.css" type="text/css"/>
+</head>
+<body>
+<table id="my_table">
+<tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+<tr><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>5</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>6</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>8</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>10</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+<table class="controlcenter">
+  <tr><td colspan="3">controlcenter</td></tr>
+  <tr><td>**</td><td><input type="button" value="go" onclick="move('go')"/></td><td>**</td></tr>
+  <tr><td><input type="button" value="left" onclick="move('left')"/></td><td>**</td><td><input type="button" value="right" onclick="move('right')"/></td></tr>
+  <tr><td>**</td><td><input type="button" value="down" onclick="move('down')"/></td><td>**</td></tr>
+  
+ </table>
+</body>
+<script language="javascript" type="text/javascript">
+//获取table的属性
+var table=document.getElementById("my_table");   
+var totalRows=table.rows.length-1;     
+//将设置好的div赋给单元格
+var x=6;
+var y=6;
+var my_item=table.rows[x].cells[y];
+my_item.setAttribute("class","my_item");
+function move(direct){
+switch (direct)
+{
+case 'go':
+
+if (x>1)
+  
+	{
+		document.styleSheets[0].cssRules[4].style.backgroundImage='url(up.jpg)'
+		table.rows[x].cells[y].className='';
+	    x=x-1;
+	    table.rows[x].cells[y].className='my_item';}
+	else {
+		alert("up to margin");
+		}
+break;
+case 'right':
+
+if (y<10)
+{
+	document.styleSheets[0].cssRules[4].style.backgroundImage='url(right.jpg)';
+	table.rows[x].cells[y].className='';
+	y=y+1;
+	table.rows[x].cells[y].className='my_item';}
+	else {
+		alert("up to margin");
+		}
+		break;
+
+case 'down':
+
+if (x<10)
+  
+	{
+		document.styleSheets[0].cssRules[4].style.backgroundImage='url(down.jpg)'
+		table.rows[x].cells[y].className='';
+	    x=x+1;
+	    table.rows[x].cells[y].className='my_item';}
+	else {
+		alert("up to margin");
+		}
+		
+break;
+
+case 'left':
+
+if (y>1)
+  
+	{
+		document.styleSheets[0].cssRules[4].style.backgroundImage='url(left.jpg)'
+		table.rows[x].cells[y].className='';
+	    y=y-1;
+	    table.rows[x].cells[y].className='my_item';}
+	else {
+		alert("up to margin");
+		}
+break;
+}
+}
+</script> 
+</html>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+table{
+	width:440px;
+	height:440px;
+	
+	border-collapse:collapse;}
+table td,table tr{width:40px;
+	height:40px;
+	border:1px dotted #A79B9B;}
+.square{
+width:40px;
+height:40px
+}
+.controlcenter{
+width:240px;
+height:150px;
+border:1px solid white;
+text-align:center;
+}
+.my_item{
+	background-image:url(up.jpg);
+	background-repeat:no-repeat;
+	width:40px;
+	height::40px;
+}
